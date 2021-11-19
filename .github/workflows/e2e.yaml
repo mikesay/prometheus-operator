@@ -3,9 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - 'release-*'
-      - 'master'
-      - 'main'
+      - 'release-0.521'
     tags:
       - 'v*'
 jobs:
@@ -57,8 +55,8 @@ jobs:
         kubectl get pods -A
     - name: Load images
       run: |
-        kind load docker-image quay.io/prometheus-operator/prometheus-operator:$(git rev-parse --short HEAD)
-        kind load docker-image quay.io/prometheus-operator/prometheus-config-reloader:$(git rev-parse --short HEAD)
+        kind load docker-image mikejianzhang/prometheus-operator:$(git rev-parse --short HEAD)
+        kind load docker-image mikejianzhang/prometheus-config-reloader:$(git rev-parse --short HEAD)
         kubectl apply -f scripts/kind-rbac.yaml
     - name: Run tests
       run: >

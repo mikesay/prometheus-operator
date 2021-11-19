@@ -3,9 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - 'release-*'
-      - 'master'
-      - 'main'
+      - 'release-0.521'
     tags:
       - 'v*'
 jobs:

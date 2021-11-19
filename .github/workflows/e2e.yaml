@@ -55,8 +55,8 @@ jobs:
         kubectl get pods -A
     - name: Load images
       run: |
-        kind load docker-image mikejianzhang/prometheus-operator:$(git rev-parse --short HEAD)
-        kind load docker-image mikejianzhang/prometheus-config-reloader:$(git rev-parse --short HEAD)
+        kind load docker-image quay.io/prometheus-operator/prometheus-operator:$(git rev-parse --short HEAD)
+        kind load docker-image quay.io/prometheus-operator/prometheus-config-reloader:$(git rev-parse --short HEAD)
         kubectl apply -f scripts/kind-rbac.yaml
     - name: Run tests
       run: >

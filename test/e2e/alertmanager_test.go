@@ -1107,7 +1107,7 @@ receivers:
   webhook_configs:
   - url: http://test.url
 templates: []
-`, configNs, configNs, configNs, configNs, configNs, configNs, configNs, configNs, configNs)
+`, configNs, configNs, configNs, configNs, configNs, configNs, configNs)
 
 		if diff := cmp.Diff(string(cfgSecret.Data["alertmanager.yaml"]), expected); diff != "" {
 			lastErr = errors.Errorf("got(-), want(+):\n%s", diff)

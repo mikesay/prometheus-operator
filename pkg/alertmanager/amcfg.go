@@ -768,8 +768,8 @@ func convertInhibitRule(in *monitoringv1alpha1.InhibitRule, crKey types.Namespac
 		}
 	}
 
-	targetMatch["namespace"] = crKey.Namespace
-	delete(targetMatchRE, "namespace")
+	/*targetMatch["namespace"] = crKey.Namespace
+	delete(targetMatchRE, "namespace")*/
 
 	// Set to nil if empty so that it doesn't show up in resulting yaml
 	if len(targetMatchRE) == 0 {

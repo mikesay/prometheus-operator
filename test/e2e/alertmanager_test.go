@@ -1041,12 +1041,9 @@ route:
   - job
   routes:
   - receiver: %s-e2e-test-amconfig-many-receivers-e2e
-    match:
-      namespace: %s
     continue: true
   - receiver: %s-e2e-test-amconfig-sub-routes-e2e
     match:
-      namespace: %s
       service: webapp
     continue: true
     routes:

@@ -211,8 +211,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -259,10 +257,8 @@ templates: []
 inhibit_rules:
 - target_match:
     alertname: TargetDown
-    namespace: mynamespace
   source_match:
     alertname: NodeNotReady
-    namespace: mynamespace
   equal:
   - node
 receivers:
@@ -298,8 +294,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
   - receiver: "null"
 receivers:
@@ -356,7 +350,6 @@ templates: []
   routes:
   - receiver: mynamespace-myamc-test-pd
     match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -400,8 +393,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -458,8 +449,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -520,8 +509,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -582,8 +569,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -647,8 +632,6 @@ route:
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"
@@ -719,8 +702,6 @@ route:
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test
-    match:
-      namespace: mynamespace
     continue: true
 receivers:
 - name: "null"

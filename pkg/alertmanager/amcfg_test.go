@@ -349,7 +349,6 @@ templates: []
   receiver: "null"
   routes:
   - receiver: mynamespace-myamc-test-pd
-    match:
     continue: true
 receivers:
 - name: "null"
